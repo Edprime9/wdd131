@@ -7,11 +7,13 @@ body {
   font-family: arial, sans-serif;
 }
 
+p {
+  padding: 25px;
+}
+
 header {
   background-color: grey;
-  padding: 25px;
   color: rgb(255, 255, 255);
-  /* text-align: center; */
 }
 
 nav {
@@ -22,6 +24,7 @@ nav ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  padding: 0;
 }
 nav ul li {
   margin: 0 15px;
@@ -34,7 +37,6 @@ nav ul li a {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
-  /* padding: 20px; */
 }
 main {
   background-color: lightgrey;
@@ -48,7 +50,5 @@ footer {
   background-color: #333;
   color: white;
   padding-bottom: 75px;
-  padding-top: 10px;
   text-align: center;
-  /* margin-top: 20px; */
 }
