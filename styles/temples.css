@@ -1,0 +1,127 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/* Header styling */
+header {
+    background-color: #33EB33;
+    color: #000;
+    padding: 1rem;
+    text-align: right;
+}
+main { 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+h1 {
+    font-size: 2rem;
+    text-align: left;
+}
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+/* Navigation menu */
+nav {
+    background-color: #33eb33;
+}
+.navigation {
+    list-style: none;
+	max-width: 760px;
+    gap: 30px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: #000;
+    padding: 0.7rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.1s;
+	font-size: clamp(1.9rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, navigation a:active {
+    background-color: black;
+    color: white;
+}
+
+/* Mobile menu */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(51, 235, 51);
+    color: #000;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+/* Show menu items when active */
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "✖";
+}
+
+/* Gallery layout */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+figure {
+    padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    background-color: #33EB33;
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+#lastModified {
+    color: #000;
+    font-style: italic;
+  }
+  
+

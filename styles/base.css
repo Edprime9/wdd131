@@ -1,23 +1,10 @@
-/* 
- COLOR PALLETTE
- gray 5
-#adb5bd
-gray 6
-#868e96
-gray 7
-#495057
-gray 8
-#343a40
-gray 9
-#212529
- */
 
 /* General Styles */
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 400;
-  color: #212529;
+  color: #000;
 }
 
 /* Header */
@@ -28,18 +15,19 @@ header {
 
 header h1 {
   font-size: 22px;
-  background-color: #868e96;
+  background-color: #33EB33;
   padding: 20px;
   margin: 0;
 }
 
 
 .highlight {
-  color: #fdda44;
+  color: #000;
+  font-style: italic;
 }
 
 nav {
-  background-color: #000;
+  background-color: #868e96;
   display: flex;
   justify-content: space-around;
   gap: 20px;
@@ -152,10 +140,12 @@ hr {
 
 /* Footer */
 footer {
-  background-color: #868e96;
+  background-color: #33EB33;
   color: #000;
-  padding: 20px;
-  margin-top: 20px;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
 }
 
 footer p {
@@ -163,5 +153,6 @@ footer p {
 }
 
 #lastModified {
-  color: #fdda44;
+  color: #000;
+  font-style: italic;
 }
