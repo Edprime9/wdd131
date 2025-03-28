@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai</title>
@@ -9,50 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles/place.css">
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <h1>Dubai</h1>
+      <h1>Dubai</h1>
     </header>
 
-    <main>
-        <picture>
-            <source srcset="images/madagascar-mobile.webp" media="(max-width: 600px)">
-            <!-- <img src="images/dubai.webp" alt="Dubai"> -->
-        </picture>
+    <main class="container">
+      <img src="images/dubai.webp" alt="dubai" class="background">
 
-        <section class="data">
-            <h2>Data</h2>
-                <p><strong>Area:</strong> 4, 114 km<sup>2</sup></p>
-                <p><strong>Population:</strong> 3.5 million (2024 estimate)</p>
-                <p><strong>Capital:</strong> Dubai</p>
-                <p><strong>Languages:</strong> Arabic (official)</p>
-                <p><strong>Currency:</strong> UAE Dirham (AED)</p>
-                <p><strong>Time Zone:</strong> Gulf Standard Time (GST, UTC+4)</p>
-                <p><strong>Calling Code:</strong> +971</p>
-                <p><strong>Internet TLD:</strong> .ae</p>
-        </section>
+      <section class="data">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 4, 114 km<sup>2</sup></p>
+        <p><strong>Population:</strong> 3.5 million (2024 estimate)</p>
+        <p><strong>Capital:</strong> Dubai</p>
+        <p><strong>Languages:</strong> Arabic (official)</p>
+        <p><strong>Currency:</strong> UAE Dirham (AED)</p>
+        <p><strong>Time Zone:</strong> Gulf Standard Time (GST, UTC+4)</p>
+        <p><strong>Calling Code:</strong> +971</p>
+        <p><strong>Internet TLD:</strong> .ae</p>
+      </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather Icon" width="50">
-            <p><strong>Temperature:</strong><span id="temp">35°C</span></p>
-            <p><strong>Conditions:</strong> Sunny</p>
-            <p><strong>Wind Speed:</strong><span id="wind"> 15 km/h</span></p>
-            <p><strong>Wind Chill:</strong><span id="windchill"> N/A</span></p>
-
-        </section>
+      <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather-icon.svg" alt="Weather Icon" width="50">
+        <p><strong>Temperature:</strong><span id="temp">35°C</span></p>
+        <p><strong>Conditions:</strong> Sunny</p>
+        <p><strong>Wind Speed:</strong><span id="wind"> 15 km/h</span></p>
+        <p><strong>Wind Chill:</strong><span id="windchill"> N/A</span></p>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Morrison Eli 🌍 Dubai</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+      <p>&copy; 2025 Morrison Eli 🌍 Dubai</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
     <script src="scripts/place.js" defer></script>
-
-</body>
+  </body>
 </html>
