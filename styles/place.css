@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
@@ -39,6 +39,12 @@ header {
   max-width: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+}
+
+.data h2,
+.weather h2 {
+  border-bottom: 3px solid var(--primary-color);
+  padding: 5px;
 }
 
 .weather img {
