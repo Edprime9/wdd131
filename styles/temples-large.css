@@ -4,10 +4,9 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .navigation {
-        /* flex-direction: row;
-        justify-content: center; */
         display: flex;
     }
+    
     nav {
         display: flex;
         justify-content: flex-end;
@@ -21,6 +20,5 @@
     }
     #menu {
         display: none;
-    }
-    
+    }  
 }

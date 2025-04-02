@@ -1,0 +1,54 @@
+/* Larger screens */
+@media only screen and  (min-width: 40em) {
+     div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .temple-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 15px;
+        padding: 15px;
+        width: 320px; 
+    }
+    
+    .temple-card img {
+        width: 100%;
+        height: 180px; /* Adjust height to maintain uniformity */
+        object-fit: cover; /* Ensures images fill the container without distortion */
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .temple-card h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    
+    .temple-card p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+    
+    main { 
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    .navigation {
+        display: flex;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+	}
+    .navigation a {
+		text-align: center;
+    }
+    #menu {
+        display: none;
+    }
+}
