@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Morrison Eli">
+    <meta name="description" content="Product Review Page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+  </head>
+  <body>
+    <main>
+      <h1>Product Review Form</h1>
+      <form method="get" action="review.html">
+        <!-- Product Selection -->
+        <label for="product" class="required">Product Name</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <!-- Overall Rating -->
+        <fieldset>
+          <legend class="required">Overall Rating</legend>
+          <label
+            ><input
+              type="radio"
+              name="rating"
+              id="rating1"
+              value="1"
+              required
+              >
+            1 &star;</label
+          >
+          <label
+            ><input type="radio" name="rating" id="rating2" value="2"> 2
+            &star;&star;</label
+          >
+          <label
+            ><input type="radio" name="rating" id="rating3" value="3"> 3
+            &star;&star;&star;</label
+          >
+          <label
+            ><input type="radio" name="rating" id="rating4" value="4"> 4
+            &star;&star;&star;&star;</label
+          >
+          <label
+            ><input type="radio" name="rating" id="rating5" value="5"> 5
+            &star;&star;&star;&star;&star;</label
+          >
+        </fieldset>
+
+        <!-- Installation Date -->
+        <label for="install-date" class="required">Date of Installation</label>
+        <input type="date" id="install-date" name="install-date" required>
+
+        <!-- Useful Features -->
+        <fieldset>
+          <legend>Useful Features</legend>
+          <label for="durability"
+            ><input
+              type="checkbox"
+              id="durability"
+              name="features"
+              value="durability"
+            >
+            Durability</label
+          >
+          <label for="design"
+            ><input
+              type="checkbox"
+              id="design"
+              name="features"
+              value="design"
+            >
+            Design</label
+          >
+          <label for="ease"
+            ><input type="checkbox" id="ease" name="features" value="ease">
+            Ease of Use</label
+          >
+          <label for="performance"
+            ><input
+              type="checkbox"
+              id="performance"
+              name="features"
+              value="performance"
+            >
+            Performance</label
+          >
+        </fieldset>
+
+        <!-- Review Text -->
+        <label for="review" class="optional">Written Review</label>
+        <textarea
+          id="review"
+          name="review"
+          rows="4"
+          placeholder="Write your thoughts here..."
+        ></textarea>
+
+        <!-- Username -->
+        <label for="username" class="optional">Your Name</label>
+        <input type="text" id="username" name="username">
+
+        <!-- Submit -->
+        <input type="submit" value="Post Review">
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy;<span id="currentyear"></span> | Morrison Eli | 🌍 Nigeria</p>
+      <p id="lastModified"></p>
+    </footer>
+    
+    <script src="scripts/form.js"></script>
+  </body>
+</html>

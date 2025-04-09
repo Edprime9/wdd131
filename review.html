@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Morrison Eli">
+    <meta name="description" content="Form Review Confirmation Page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+  </head>
+  <body>
+    <main>
+      <h1>Thank You for Your Review!</h1>
+      <p>Your review has been submitted successfully.</p>
+      <p>Total Reviews Submitted: <span id="review-count">0</span></p>
+    </main>
+    <footer>
+      <p>&copy;<span id="currentyear"></span> | Morrison Eli | 🌍 Nigeria</p>
+      <p id="lastModified"></p>
+    </footer>
+    <script>
+      let count = localStorage.getItem("reviewCount") || 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+      document.getElementById("review-count").textContent = count;
+
+      // Dynamically populate current year
+      document.getElementById("currentyear").textContent =
+        new Date().getFullYear();
+
+      // Dynamically populate last modified date
+      document.getElementById("lastModified").textContent =
+        "Last Modification: " + document.lastModified;
+    </script>
+  </body>
+</html>
