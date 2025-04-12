@@ -63,6 +63,7 @@ input[type="text"],
 input[type="date"],
 select {
   height: 44px;
+  width: 100%;
 }
 
 input[type="submit"] {
@@ -73,6 +74,7 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  width: 100%;
 }
 
 input[type="submit"]:hover {
