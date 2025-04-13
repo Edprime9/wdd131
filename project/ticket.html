@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Morrison Eli">
+  <meta name="description" content="Confirm and manage your booked tickets with SeatSure. View event details, venue information, and your confirmed seat reservations.">
+  <title>SeatSure - Book Ticket</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">SeatSure</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="ticket.html">My Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+        <section class="booking">
+            <h2 id="event-title">Booking Ticket for: </h2>
+            <p id="event-details"></p>
+
+      <form id="ticket-form">
+        <label for="name" class="ticket-label required">Your Name:</label>
+        <input type="text" id="name" class="ticket-input" required>
+
+        <label for="quantity" class="ticket-label required">Number of Tickets:</label>
+        <input type="number" id="quantity" min="1" value="1" required class="ticket-input">
+
+        <button type="submit" class="book-btn">Confirm Booking</button>
+      </form>
+
+      <p id="confirmation" class="hidden"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> SeatSure | All rights reserved</p>
+  </footer>
+
+  <script>
+    // Footer year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Get event details from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventName = urlParams.get('event');
+    const eventDate = urlParams.get('date');
+    const eventVenue = urlParams.get('venue');
+
+    if (eventName) {
+      document.getElementById('event-title').textContent = `Booking Ticket for: ${eventName}`;
+      document.getElementById('event-details').textContent = `Date: ${eventDate} | Venue: ${eventVenue}`;
+    }
+
+    // Ticket form submission
+    document.getElementById('ticket-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const quantity = document.getElementById('quantity').value;
+
+      const booking = {
+        event: eventName,
+        name: name,
+        quantity: quantity,
+        date: eventDate,
+        venue: eventVenue
+      };
+
+      // Save booking in localStorage
+      localStorage.setItem('lastBooking', JSON.stringify(booking));
+
+      // Show confirmation
+      document.getElementById('confirmation').textContent = `✅ Thank you, ${name}! You have booked ${quantity} ticket(s) for ${eventName}.`;
+      document.getElementById('confirmation').classList.remove('hidden');
+
+      // Optionally clear form
+      document.getElementById('ticket-form').reset();
+    });
+  </script>
+</body>
+</html>

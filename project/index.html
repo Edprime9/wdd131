@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Morrison Eli">
+    <meta name="description" content="SeatSure — find, explore, and book tickets for concerts, festivals, and live shows near you. Discover your next unforgettable event today!">
+    <title>SeatSure - Book Concert & Event Tickets</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="logo">SeatSure</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="ticket.html">My Tickets</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Find & Book Your Perfect Event</h1>
+        <p>Discover concerts and live shows near you. Secure your seat now!</p>
+        <form class="search-bar" action="events.html" method="get">
+          <input type="text" name="query" placeholder="Search by artist, event or venue..." required>
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-grid">
+          <article class="event-card">
+            <h3>Ed Sheeran Live</h3>
+            <p>Date: June 15, 2025 | Location: Lagos Arena</p>
+            <a class="book-btn" href="ticket.html?event=Ed%20Sheeran%20Live&date=June%2015,%202025&venue=Lagos%20Arena">Book Now</a>
+          </article>
+          <article class="event-card">
+            <h3>Afrobeat Fest</h3>
+            <p>Date: July 10, 2025 | Location: Abuja Stadium</p>
+            <a class="book-btn" href="ticket.html?event=Afrobeat%20Fest&date=July%2010,%202025&venue=Abuja%20Stadium">Book Now</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> SeatSure | All rights reserved</p>
+    </footer>
+
+    <script>
+      // Dynamic year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

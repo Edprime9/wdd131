@@ -1,0 +1,226 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    background-color: #F8F9FA;
+  }
+  
+  header {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FF5733;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .hero {
+    background-color: #D1E8E2;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1E1E1E;
+    font-size: 2rem;
+  }
+  
+  .search-bar {
+    margin-top: 1.5rem;
+  }
+  
+  .search-bar input {
+    padding: 0.8rem;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button {
+    padding: 0.8rem 1.2rem;
+    background-color: #FFC300;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  
+  .events {
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+  
+  .events h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #1E1E1E;
+    margin-bottom: 1rem;
+  }
+  
+  .event-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .event-card {
+    background-color: #F8F9FA;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .book-btn:link, .book-btn:visited, .book-btn {
+    background-color: #FF5733;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .book-btn:hover, .book-btn:active {
+    background-color: #FF785B;
+  }
+
+  .ticket-label {
+    margin-top: 10px;
+    display: block;
+  }
+
+  .container {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .ticket-input {
+    height: 44px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  footer {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .required::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+  }
+
+
+  /* Responsive Mobile Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .search-bar button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .events {
+    padding: 1rem;
+  }
+
+  .events h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    padding: 1rem;
+  }
+
+  .book-btn {
+    width: 100%;
+  }
+
+  .contact-form form {
+    padding: 0 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .support-info ul {
+    padding-left: 1rem;
+  }
+
+  .support-info li {
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
